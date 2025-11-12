@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GlowUp Cosmetics</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff8f0;
+      color: #333;
+    }
+
+    header {
+      background-color: #ff6f91;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 2rem;
+      background-color: #ffe0e9;
+    }
+
+    .product-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 2rem;
+    }
+
+    .product-card {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 1rem;
+      width: 200px;
+      text-align: center;
+    }
+
+    .product-card img {
+      width: 100%;
+      border-radius: 4px;
+    }
+
+    button {
+      background-color: #ff6f91;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      margin-top: 0.5rem;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #ff6f91;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>GlowUp Cosmetics</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Discover Your Glow</h2>
+    <p>Premium cosmetics for every skin type</p>
+  </section>
+
+  <section class="product-grid">
+    <div class="product-card">
+      <img src=https://images.mamaearth.in/catalog/product/s/w/swatch_5.jpg?format=auto&height=600 alt="Lipstick" />
+      <h3>Velvet Matte Lipstick</h3>
+      <p>₹499</p>
+      <button onclick="addToCart('Lipstick')">Add to Cart</button>
+    </div>
+    <div class="product-card">
+      <img src=data:image/jpeg;base64,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 alt="Foundation" />
+      <h3>HydraGlow Foundation</h3>
+      <p>₹899</p>
+      <button onclick="addToCart('Foundation')">Add to Cart</button>
+    </div>
+    <!-- Add more products as needed -->
+  </section>
+
+  <footer>
+    <p>&copy; 2025 GlowUp Cosmetics. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function addToCart(productName) {
+      alert(productName + " has been added to your cart!");
+    }
+  </script>
+</body>
+</html>
+
